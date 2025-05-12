@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 16:47:23 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/12 17:29:50 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/05/12 18:16:51 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,4 @@
 int main()
 {
     Zombie::zombieHorde(10, "zombie");
-    delete(Z);
 }
