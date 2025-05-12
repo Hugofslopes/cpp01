@@ -5,21 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/12 18:38:05 by hfilipe-          #+#    #+#              #
-#    Updated: 2025/05/12 18:38:39 by hfilipe-         ###   ########.fr        #
+#    Created: 2025/05/12 18:33:12 by hfilipe-          #+#    #+#              #
+#    Updated: 2025/05/12 18:40:53 by hfilipe-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLAGS = -Wall -Wextra -Werror -ggdb
 STD98 = -std=c++98
 CXX = c++
-INCLUDES = -I includes
-SRC_DIR = src
 OBJ_DIR = obj
-SRC = Zombie.cpp main.cpp zombieHorde.cpp
-SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
-OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
-NAME = Zombies
+SRC = main.cpp
+OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRC))
+NAME = Brain
 DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)
@@ -27,11 +24,10 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(FLAGS) $(STD98) $(OBJS) -o $(NAME)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-	@mkdir -p $(OBJ_DIR)
-	$(CXX) $(FLAGS) $(STD98) $(INCLUDES) -MMD -c $< -o $@
 
--include $(DEPS)
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(OBJ_DIR)
+	$(CXX) $(FLAGS) $(STD98) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ_DIR)

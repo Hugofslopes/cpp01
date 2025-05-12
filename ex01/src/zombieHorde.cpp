@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 16:32:22 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/12 18:32:02 by hfilipe-         ###   ########.fr       */
+/*   Created: 2025/05/12 18:28:53 by hfilipe-          #+#    #+#             */
+/*   Updated: 2025/05/12 18:29:20 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Zombie.hpp"
 
-Zombie::Zombie() : name("Unnamed") {
-    std::cout << "Default constructor created a new Zombie"
-    << std::endl;
-}
-
-Zombie::Zombie(std::string name) : name(name) {
-    std::cout << "Parameterized constructor created a new Zombie"
-    << std::endl;
-}
-
-Zombie::~Zombie(){
-    std::cout << name << " - Zombie Destructor" << std::endl;
-}
-
-void Zombie::announce(void)
+Zombie* Zombie::zombieHorde(int N, std::string name)
 {
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+    Zombie* horde = new Zombie[N];
 
+    for (int i = 0; i < 0; i++)
+    {
+        horde[i] = Zombie(name);
+    }
+    return (horde);
+}

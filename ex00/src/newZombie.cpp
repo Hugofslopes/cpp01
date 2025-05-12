@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 16:32:22 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/12 18:32:02 by hfilipe-         ###   ########.fr       */
+/*   Created: 2025/05/12 18:30:59 by hfilipe-          #+#    #+#             */
+/*   Updated: 2025/05/12 18:31:47 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Zombie.hpp"
 
-Zombie::Zombie() : name("Unnamed") {
-    std::cout << "Default constructor created a new Zombie"
-    << std::endl;
+Zombie* Zombie::newZombie(std::string name) {
+    return (new Zombie(name)); 
 }
-
-Zombie::Zombie(std::string name) : name(name) {
-    std::cout << "Parameterized constructor created a new Zombie"
-    << std::endl;
-}
-
-Zombie::~Zombie(){
-    std::cout << name << " - Zombie Destructor" << std::endl;
-}
-
-void Zombie::announce(void)
-{
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
