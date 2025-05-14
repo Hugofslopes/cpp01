@@ -4,10 +4,10 @@ CXX = c++
 INCLUDES = -I includes
 SRC_DIR = src
 OBJ_DIR = obj
-SRC = Zombie.cpp main.cpp
+SRC = Harl.cpp main.cpp
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
 OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
-NAME = Zombies
+NAME = UnnecessaryViolence
 DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)

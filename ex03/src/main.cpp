@@ -5,28 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 16:47:23 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/14 13:25:08 by hfilipe-         ###   ########.fr       */
+/*   Created: 2025/05/14 16:43:09 by hfilipe-          #+#    #+#             */
+/*   Updated: 2025/05/14 16:45:07 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Zombie.hpp"
+#include "../includes/HumanA.hpp"
+#include "../includes/HumanB.hpp"
 
-int main()
-{
-    Zombie *fourEverALive = newZombie("4everAlive");
-    
+int main(){
     {
-    Zombie zombie1("AlmostDead");
-    zombie1.announce();
+        Weapon club = Weapon("crude spiked club");
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
     }
-    std::cout << std::endl;
-    randomChump("NotDeadYet");
     {
-        std::cout << std::endl;
+        Weapon club = Weapon("crude spiked club");
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
     }
-    std::cout << "IS THERE ANYONE ALIVE" << std::endl;;
-    (*fourEverALive).announce();
-    //zombie1.announce();
-    delete fourEverALive;
+    return (0);
 }

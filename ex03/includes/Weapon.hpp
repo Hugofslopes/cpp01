@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 16:32:22 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/14 13:39:55 by hfilipe-         ###   ########.fr       */
+/*   Created: 2025/05/14 15:05:59 by hfilipe-          #+#    #+#             */
+/*   Updated: 2025/05/14 15:41:17 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-Zombie::Zombie(std::string name) : _name(name) {
-    std::cout << "Created a new Zombie"
-    << std::endl;
-}
+#include <iostream>
 
-Zombie::~Zombie(){
-    std::cout << _name << " destroyed" << std::endl;
-}
+class Weapon{
+    public:
+        Weapon();
+        Weapon(const std::string& type);
+        ~Weapon();
+        std::string getType() const;
+        void setType(const std::string& type);
+    private:
+    std::string type;
+};
 
-void Zombie::announce(void)
-{
-    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#endif

@@ -1,22 +1,10 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/12 18:38:05 by hfilipe-          #+#    #+#              #
-#    Updated: 2025/05/12 18:38:39 by hfilipe-         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 FLAGS = -Wall -Wextra -Werror -ggdb
 STD98 = -std=c++98
 CXX = c++
 INCLUDES = -I includes
 SRC_DIR = src
 OBJ_DIR = obj
-SRC = Zombie.cpp main.cpp zombieHorde.cpp
+SRC = Zombie.cpp zombieHorde.cpp main.cpp
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
 OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 NAME = Zombies

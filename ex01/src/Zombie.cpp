@@ -6,37 +6,29 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 16:32:22 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/12 18:29:03 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/05/14 14:03:03 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Zombie.hpp"
 
-Zombie::Zombie() : name("Unnamed") {
-    std::cout << "Default constructor created a new Zombie"
-    << std::endl;
-}
+Zombie::Zombie(){}
 
-Zombie::Zombie(std::string name) : name(name) {
-    std::cout << "Parameterized constructor created a new Zombie"
+Zombie::Zombie(std::string name) : _name(name) {
+    std::cout << "Created a new Zombie"
     << std::endl;
 }
 
 Zombie::~Zombie(){
-    std::cout << name << " - Zombie Destructor" << std::endl;
-}
-
-Zombie* Zombie::newZombie(std::string name) {
-    return (new Zombie(name)); 
+    std::cout << _name << " destroyed" << std::endl;
 }
 
 void Zombie::announce(void)
 {
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-void Zombie::randomChump(std::string name)
+void Zombie::setName(const std::string& name)
 {
-    Zombie N_zombie(name);
-    N_zombie.announce(); 
+    _name = name;
 }
