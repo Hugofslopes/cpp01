@@ -7,7 +7,7 @@ OBJ_DIR = obj
 SRC = Harl.cpp main.cpp
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
 OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
-NAME = UnnecessaryViolence
+NAME = harlFilter
 DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)

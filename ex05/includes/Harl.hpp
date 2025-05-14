@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:54:06 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/14 18:53:47 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/05/14 21:29:40 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,23 @@
 # include <sstream>
 # include <cstdlib>
 
-# define DEBUG " love having extra bacon for my 7XL-double-cheese-triple-pickle- \
-special- ketchup burger. I really do!"
-# define INFO " cannot believe adding extra bacon costs more money. You didn’t put \
-enough bacon in my burger! If you did, I wouldn’t be asking for more!"
-# define WARNING "I think I deserve to have some extra bacon for free. I’ve been \
-coming for years, whereas you started working here just last month."
-# define ERROR "This is unacceptable! I want to speak to the manager now."
+# define DEBUG "I love working with Git. Finally figuring out how to push my commits is so satisfying!\n"
+# define INFO "I can't believe I have to pull before every push. Why can't my branch stay up to date?\n"
+# define WARNING "I deserve a break after resolving endless merge conflicts!\n"
+# define ERROR "Forget pushing! My push was rejected again due to conflicts!"
+# define DEFAULT "[ Who knows, probably complaining about stuff ]"
 
 class Harl {
     public:
         Harl();
         ~Harl();
+        
+        void complain(std::string level);
+
+    private:
         void debug(void);
         void info(void);
         void warning(void);
         void error(void);
-        void complain(std::string level);
-
-    private:
-    
 };
 #endif

@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:29:37 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/14 16:48:42 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/05/14 21:35:31 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 #include <string>
 #include <cstdlib>
 
-
-void replaceAll(std::string& str, const std::string& s1, const std::string& s2) {
+void replaceAll(std::string &str, const std::string &s1, const std::string &s2) {
     std::string::size_type pos = 0;
     while ((pos = str.find(s1, pos)) != std::string::npos) {
-        str.erase(pos, s1.length());
-        str.insert(pos, s2);
+        str.replace(pos, s1.length(), s2);
         pos += s2.length();
     }
 }
@@ -44,10 +42,11 @@ int main(int ac, char **av)
     std::ofstream output(outputFilename.c_str(), std::ios::out | std::ios::binary);
     if (!output)
         std::cerr << "Error opening output file: " << outputFilename << std::endl,
-        input.close(), exit(1);
+            input.close(), exit(1);
 
     std::string line;
-    while (std::getline(input, line)) {
+    while (std::getline(input, line))
+    {
         replaceAll(line, s1, s2);
         output << line << std::endl;
     }
