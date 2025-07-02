@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hfilipe- < hfilipe-@student.42porto.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/05/15 12:18:47 by hfilipe-          #+#    #+#              #
+#    Updated: 2025/05/15 12:18:49 by hfilipe-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 FLAGS = -Wall -Wextra -Werror -ggdb
 STD98 = -std=c++98
 CXX = c++
@@ -7,7 +19,7 @@ OBJ_DIR = obj
 SRC = Harl.cpp main.cpp
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
 OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
-NAME = UnnecessaryViolence
+NAME = Harl2.0
 DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)

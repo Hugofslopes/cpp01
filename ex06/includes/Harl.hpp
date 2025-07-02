@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: hfilipe- < hfilipe-@student.42porto.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:54:06 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/14 21:29:05 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/05/15 12:18:59 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,24 @@
 # define DEFAULT "[ Who knows, probably complaining about stuff ]"
 
 enum LogLevel {
-    debug,
-    info,
-    warning,
-    errors,
+	debug,
+	info,
+	warning,
+	errors,
 };
 
 class Harl {
-    
-    public:
-        Harl();
-        ~Harl();
-        
-        void complain(std::string level);
+	
+	public:
+		Harl();
+		~Harl();
+		
+		void complain(std::string level);
 
-    private:
-        void debug(void);
-        void info(void);
-        void warning(void);
-        void error(void);
+	private:
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
 };
 #endif

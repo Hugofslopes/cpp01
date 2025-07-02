@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: hfilipe- < hfilipe-@student.42porto.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:54:06 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/05/14 21:29:40 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/05/15 12:17:35 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@
 # define DEFAULT "[ Who knows, probably complaining about stuff ]"
 
 class Harl {
-    public:
-        Harl();
-        ~Harl();
-        
-        void complain(std::string level);
+	public:
+		Harl();
+		~Harl();
+		
+		void complain(std::string level);
 
-    private:
-        void debug(void);
-        void info(void);
-        void warning(void);
-        void error(void);
+	private:
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
 };
 #endif

@@ -3,13 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+         #
+#    By: hfilipe- < hfilipe-@student.42porto.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 16:41:08 by hfilipe-          #+#    #+#              #
-#    Updated: 2025/05/14 16:42:23 by hfilipe-         ###   ########.fr        #
+#    Updated: 2025/05/15 12:16:54 by hfilipe-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 FLAGS = -Wall -Wextra -Werror -ggdb
 STD98 = -std=c++98
