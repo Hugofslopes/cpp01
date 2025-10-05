@@ -22,10 +22,12 @@
 
 <details>
 <summary><b>Ex01 - </b></summary>
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/316cc0a3-66cd-4e3c-b1dc-b39cc7a3aea3" height="200"/>
+<p>
+The goal of this exercise is to create a method that allows us to create multiple objects of the same class, again allocating memory on the heap. Basically, we receive the number of objects as a parameter, and when we use new, we use this size to allocate memory for all the objects at once. It's important to ensure that, when the program ends, we delete all the created objects to avoid memory leaks.
+<img width="1040" height="444" alt="Image" src="https://github.com/user-attachments/assets/9ce77347-2793-481a-92fb-8fbd2887acb6" />
+When we delete the objects, we do not need to do it in a loop. We just need to treat the object as an array of objects <b>([])</b>, and all the objects inside will be deleted.
+<img width="1074" height="482" alt="Image" src="https://github.com/user-attachments/assets/f4f90d34-b9fc-4252-a36c-b8369b7c3895" />
 </p>
-
 </details>
 
 <details>
